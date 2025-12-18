@@ -25,29 +25,72 @@
   overflow: hidden;
 }
 
-.auth-tabs {
+.toggle-container {
   display: flex;
+  justify-content: center;
+  padding: 20px;
   background: rgb(164, 5, 204);
 }
 
-.tab {
-  flex: 1;
-  padding: 15px;
-  border: none;
-  background: transparent;
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
+.toggle-switch {
+  position: relative;
 }
 
-.tab:hover {
-  background: rgba(255,255,255,0.1);
+.toggle-switch input[type="checkbox"] {
+  display: none;
 }
 
-.tab.active {
+.toggle-label {
+  display: flex;
+  align-items: center;
   background: white;
+  border-radius: 25px;
+  padding: 4px;
+  cursor: pointer;
+  position: relative;
+  width: 200px;
+  height: 40px;
+}
+
+.toggle-text {
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  z-index: 2;
+  transition: color 0.3s;
+}
+
+.toggle-text.login {
   color: rgb(164, 5, 204);
+}
+
+.toggle-text.signup {
+  color: #666;
+}
+
+.toggle-switch input:checked + .toggle-label .toggle-text.login {
+  color: #666;
+}
+
+.toggle-switch input:checked + .toggle-label .toggle-text.signup {
+  color: rgb(164, 5, 204);
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 96px;
+  height: 32px;
+  background: rgb(164, 5, 204);
+  border-radius: 20px;
+  transition: transform 0.3s;
+  z-index: 1;
+}
+
+.toggle-switch input:checked + .toggle-label .toggle-slider {
+  transform: translateX(96px);
 }
 
 .auth-form {

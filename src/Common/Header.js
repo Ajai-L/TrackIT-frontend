@@ -1,5 +1,22 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
 function Header() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const auth = localStorage.getItem("auth");
+    setIsAuthenticated(auth === "true");
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("auth");
+    localStorage.removeItem("user");
+    setIsAuthenticated(false);
+    navigate("/login");
+  };
+
   return (
     <header className='header'>
         <span className='project-name'>TrackIT</span>
@@ -10,7 +27,13 @@ function Header() {
           <NavLink to={"/notes"}>Notes</NavLink>
           <NavLink to={"/about"}>About</NavLink>
           <NavLink to={"/profile"}>Profile</NavLink>
-          <NavLink to={"/login"}>Login</NavLink>
+          <div className="auth-buttons">
+            {isAuthenticated ? (
+              <button onClick={handleLogout} className="logout-btn">Logout</button>
+            ) : (
+              <NavLink to={"/login"}>Login</NavLink>
+            )}
+          </div>
         </div>
       </header>
   )

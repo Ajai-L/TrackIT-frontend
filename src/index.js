@@ -8,10 +8,10 @@ import Home from "./Pages/Home";
 import Dashboard from "./Pages/Dashboard";
 import About from "./Pages/About";
 import Notes from "./Pages/Notes";
-
 import Tasks from "./Pages/Tasks";
 import Profile from "./Pages/Profile";
 import Login from "./Pages/Login";
+import ProtectedRouter from "./Pages/Help";
 // just to create url and on which url which page should displayed
 const routerVariables = createBrowserRouter([
   {
@@ -20,32 +20,31 @@ const routerVariables = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Dashboard />,
+        element: <ProtectedRouter><Dashboard /></ProtectedRouter>,
       },
       {
         path: "/home",
-        element: <Home></Home>,
+        element: <ProtectedRouter><Home /></ProtectedRouter>,
       },
       {
         path: "/login",
-        element: <Login></Login>,
+        element: <Login />,
       },
       {
         path: "/notes",
-        element: <Notes></Notes>,
+        element: <ProtectedRouter><Notes /></ProtectedRouter>,
       },
-
       {
         path: "/tasks",
-        element: <Tasks></Tasks>,
+        element: <ProtectedRouter><Tasks /></ProtectedRouter>,
       },
       {
         path: "/about",
-        element: <About></About>,
+        element: <ProtectedRouter><About /></ProtectedRouter>,
       },
       {
         path: "/profile",
-        element: <Profile></Profile>,
+        element: <ProtectedRouter><Profile /></ProtectedRouter>,
       },
       {
         path: "*",

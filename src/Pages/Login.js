@@ -1,5 +1,6 @@
 import "./../Styles/Login.css";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -14,34 +15,44 @@ const Login = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!isLogin && formData.password !== formData.confirmPassword) {
       alert("Passwords don't match!");
       return;
     }
+    
+    // Set authentication in localStorage
+    localStorage.setItem("auth", "true");
+    localStorage.setItem("user", JSON.stringify({ email: formData.email, name: formData.name }));
+    
     const action = isLogin ? "Login" : "Sign Up";
     alert(`${action} successful!`);
-    console.log(formData);
+    
+    // Redirect to home page
+    navigate("/home");
   };
 
   return (
     <div className="big-container">
     <div className="login-container">
       <div className="auth-card">
-        <div className="auth-tabs">
-          <button 
-            className={`tab ${isLogin ? 'active' : ''}`}
-            onClick={() => setIsLogin(true)}
-          >
-            Login
-          </button>
-          <button 
-            className={`tab ${!isLogin ? 'active' : ''}`}
-            onClick={() => setIsLogin(false)}
-          >
-            Sign Up
-          </button>
+        <div className="toggle-container">
+          <div className="toggle-switch">
+            <input 
+              type="checkbox" 
+              id="authToggle" 
+              checked={!isLogin}
+              onChange={() => setIsLogin(!isLogin)}
+            />
+            <label htmlFor="authToggle" className="toggle-label">
+              <span className="toggle-text login">Login</span>
+              <span className="toggle-text signup">Sign Up</span>
+              <div className="toggle-slider"></div>
+            </label>
+          </div>
         </div>
         
         <form className="auth-form" onSubmit={handleSubmit}>
@@ -103,9 +114,7 @@ const Login = () => {
             {isLogin ? "Login" : "Sign Up"}
           </button>
           
-          <button className="logout-button" type="button">
-            Logout
-          </button>
+
         </form>
       </div>
     </div>
