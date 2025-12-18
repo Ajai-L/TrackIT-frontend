@@ -32,6 +32,7 @@
 
 .addButton:hover {
   background: linear-gradient(45deg, rgb(5, 131, 185),rgb(164,5,204) );
+  transform: scale(1.05);
 }
 
 .status-icons {

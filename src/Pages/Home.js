@@ -73,7 +73,7 @@ function Home() {
       <footer className="home-footer">
         <div className="footer-content">
           <Link to="/login" className="footer-link">Login</Link>
-          <p className="copyright">&copy; 2024 TrackIT. All rights reserved.</p>
+          <p className="copyright">&copy; 2025 TrackIT. All rights reserved.</p>
         </div>
       </footer>
     </div>
