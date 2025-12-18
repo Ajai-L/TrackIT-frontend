@@ -1,0 +1,133 @@
+.dashboard-h1 {
+  text-align: left;
+  color: rgb(164, 5, 204);
+  margin-top: 2rem;
+}
+
+.dashboard-container {
+  flex: 1;
+  background-color: rgb(222, 222, 222);
+  margin: 20px;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.break {
+  display: block;
+  padding: 20px;
+}
+
+.assignments-lists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: white;
+  justify-content: flex-start;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.assignment-card {
+  flex: 1 1 350px;
+  max-width: 400px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.assignment-card:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(180deg, rgb(255, 255, 255), white, rgb(221, 119, 246));
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.header-left h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.9rem;
+  gap: 6px;
+}
+
+.subject-tag {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+  display: block;
+  margin-top: 4px;
+}
+
+.due-date {
+  color: #d9534f;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.in-progress {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.status-badge.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.card-body p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.dashboard-pending {
+  display: block;
+  gap: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dashboard-pending h3 {
+  color: rgb(164, 5, 204);
+  margin: 0;
+}
+
+.break-2 {
+  display: block;
+  padding: 20px;
+}

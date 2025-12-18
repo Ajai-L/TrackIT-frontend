@@ -1,0 +1,19 @@
+Home.css
+.status-badge.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.completed,
+.status-badge.done {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-badge.late {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+
+----------------------------------------------------------------

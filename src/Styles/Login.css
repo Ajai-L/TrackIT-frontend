@@ -1,0 +1,124 @@
+.big-container{
+  flex: 1;
+  background: linear-gradient(45deg, rgb(5, 131, 185), white, white);
+  display: flex;
+}
+
+.login-container {
+  flex: 1;
+  background: linear-gradient(45deg, rgb(5, 131, 185), white, white);
+  margin: 20px;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+}
+
+.auth-tabs {
+  display: flex;
+  background: rgb(164, 5, 204);
+}
+
+.tab {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tab:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.tab.active {
+  background: white;
+  color: rgb(164, 5, 204);
+}
+
+.auth-form {
+  padding: 30px;
+  background: linear-gradient(45deg, rgb(1, 166, 236), white, white);
+}
+
+.auth-form h2 {
+  text-align: center;
+  color: rgb(164, 5, 204);
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: rgb(164, 5, 204);
+}
+
+.auth-button {
+  width: 100%;
+  padding: 14px;
+  background-color: rgb(164, 5, 204);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.auth-button:hover {
+  background: linear-gradient(45deg, rgb(5, 131, 185), rgb(164, 5, 204));
+}
+
+.logout-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}

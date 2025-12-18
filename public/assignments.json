@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "title": "Mathematics Problem Set",
+    "subject": "Math",
+    "description": "Complete exercises 5.1 to 5.5 from the textbook.",
+    "dueDate": "2023-11-15",
+    "status": "Pending"
+  },
+  {
+    "id": 2,
+    "title": "History Essay",
+    "subject": "History",
+    "description": "Write a 1000-word essay on the Industrial Revolution.",
+    "dueDate": "2023-11-20",
+    "status": "In Progress"
+  },
+  {
+    "id": 3,
+    "title": "Physics Lab Report",
+    "subject": "Physics",
+    "description": "Submit the report for the projectile motion experiment.",
+    "dueDate": "2023-11-10",
+    "status": "Completed"
+  },
+  {
+    "id": 4,
+    "title": "English Literature Reading",
+    "subject": "English",
+    "description": "Read chapters 1-3 of 'To Kill a Mockingbird'.",
+    "dueDate": "2023-11-12",
+    "status": "Pending"
+  },
+  {
+    "id": 5,
+    "title": "Chemical Bonding Quiz",
+    "subject": "Chemistry",
+    "description": "Prepare for the quiz on ionic and covalent bonds.",
+    "dueDate": "2023-11-18",
+    "status": "Pending"
+  },
+  {
+    "id": 6,
+    "title": "Python Scripting Project",
+    "subject": "Computer Science",
+    "description": "Develop a basic calculator application using Python.",
+    "dueDate": "2023-11-25",
+    "status": "In Progress"
+  },
+  {
+    "id": 7,
+    "title": "Modern Art Presentation",
+    "subject": "Art History",
+    "description": "Create a slide deck analyzing 'Starry Night'.",
+    "dueDate": "2023-11-14",
+    "status": "Completed"
+  },
+  {
+    "id": 8,
+    "title": "Cellular Respiration Diagram",
+    "subject": "Biology",
+    "description": "Draw and label the stages of the Krebs cycle.",
+    "dueDate": "2023-11-19",
+    "status": "Pending"
+  },
+  {
+    "id": 9,
+    "title": "Macroeconomics Worksheet",
+    "subject": "Economics",
+    "description": "Complete the supply and demand curve analysis sheet.",
+    "dueDate": "2023-11-22",
+    "status": "Pending"
+  },
+  {
+    "id": 10,
+    "title": "French Oral Exam",
+    "subject": "French",
+    "description": "Record a 2-minute introduction video in French.",
+    "dueDate": "2023-11-16",
+    "status": "Completed"
+  },
+  {
+    "id": 11,
+    "title": "World War II Timeline",
+    "subject": "History",
+    "description": "Create a timeline of major events in the Pacific Theater.",
+    "dueDate": "2023-11-28",
+    "status": "Pending"
+  },
+  {
+    "id": 12,
+    "title": "Calculus Integration",
+    "subject": "Math",
+    "description": "Solve problems 10-25 on definite integrals.",
+    "dueDate": "2023-11-21",
+    "status": "In Progress"
+  },
+  {
+    "id": 13,
+    "title": "Hamlet Character Analysis",
+    "subject": "English",
+    "description": "Write a character study on Ophelia's role in the play.",
+    "dueDate": "2023-11-26",
+    "status": "Pending"
+  },
+  {
+    "id": 14,
+    "title": "Geology Field Notes",
+    "subject": "Geography",
+    "description": "Transcribe field notes regarding local rock formations.",
+    "dueDate": "2023-11-13",
+    "status": "Completed"
+  }
+]
