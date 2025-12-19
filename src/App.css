@@ -123,10 +123,6 @@ color: white;
 }
 
 
-
-
-/*---------------------------------------------Profile Page Styles-------------------------------------------------*/
-
 .profile-container {
   flex: 1;
   background-color: rgb(222, 222, 222);
@@ -149,7 +145,6 @@ color: white;
 }
 
 
-/* Profile Edit Styles */
 .profile-display, .profile-edit {
   max-width: 600px;
   margin: 0 auto;

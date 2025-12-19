@@ -47,8 +47,6 @@ function Tasks() {
 
   const handleAddTask = async (e) => {
     e.preventDefault();
-    
-    // Input validation
     if (!newTask.title.trim() || !newTask.subject.trim() || !newTask.description.trim() || !newTask.dueDate) {
       alert("All fields are required!");
       return;

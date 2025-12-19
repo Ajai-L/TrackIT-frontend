@@ -11,7 +11,6 @@ import Notes from "./Pages/Notes";
 import Tasks from "./Pages/Tasks";
 import Profile from "./Pages/Profile";
 import Login from "./Pages/Login";
-// just to create url and on which url which page should displayed
 const routerVariables = createBrowserRouter([
   {
     path: "/",

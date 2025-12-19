@@ -18,7 +18,6 @@ function Profile() {
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
 
-    // Fetch user profile on component mount
     useEffect(() => {
         const fetchProfile = async () => {
             try {

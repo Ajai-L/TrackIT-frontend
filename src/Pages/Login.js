@@ -18,8 +18,6 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Input validation
     if (!formData.email || !formData.password) {
       alert("Email and password are required!");
       return;

@@ -1,5 +1,5 @@
 // API utility for making authenticated requests
-const API_BASE = 'http://localhost:5001/api/v1';
+const API_BASE = 'https://trackit-backend-r4kw.onrender.com';
 
 export const apiCall = async (endpoint, options = {}) => {
   const token = localStorage.getItem('token');

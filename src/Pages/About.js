@@ -5,7 +5,6 @@ function About() {
   return (
     <div className="about-container">
       <div className="about-content">
-        {/* Hero Section */}
         <section className="about-hero">
           <h1 className="about-title">Built by a Student, For Students</h1>
           <p className="about-subtitle">
