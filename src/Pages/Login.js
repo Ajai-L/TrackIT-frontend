@@ -10,29 +10,66 @@ const Login = () => {
     password: "",
     confirmPassword: ""
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const navigate = useNavigate();
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!isLogin && formData.password !== formData.confirmPassword) {
-      alert("Passwords don't match!");
+    
+    // Input validation
+    if (!formData.email || !formData.password) {
+      alert("Email and password are required!");
       return;
     }
     
-    // Set authentication in localStorage
-    localStorage.setItem("auth", "true");
-    localStorage.setItem("user", JSON.stringify({ email: formData.email, name: formData.name }));
+    if (formData.password.length < 8) {
+      alert("Password must be at least 8 characters long!");
+      return;
+    }
     
-    const action = isLogin ? "Login" : "Sign Up";
-    alert(`${action} successful!`);
+    if (!isLogin) {
+      if (!formData.name) {
+        alert("Name is required for signup!");
+        return;
+      }
+      if (formData.password !== formData.confirmPassword) {
+        alert("Passwords don't match!");
+        return;
+      }
+    }
     
-    // Redirect to home page
-    navigate("/home");
+    try {
+      const endpoint = isLogin ? "http://localhost:5001/api/v1/auth/login" : "http://localhost:5001/api/v1/auth/signup";
+      const body = isLogin 
+        ? { email: formData.email, password: formData.password }
+        : { name: formData.name, email: formData.email, password: formData.password, passwordConfirm: formData.confirmPassword };
+      
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(body)
+      });
+      
+      const data = await response.json();
+      
+      if (data.status === "success") {
+        localStorage.setItem("auth", "true");
+        localStorage.setItem("token", data.token);
+        localStorage.setItem("user", JSON.stringify(data.user));
+        alert(`${isLogin ? "Login" : "Sign Up"} successful!`);
+        navigate("/home");
+      } else {
+        alert(data.message || "Authentication failed");
+      }
+    } catch (error) {
+      console.error("Authentication error:", error);
+      alert("Connection error. Please make sure the backend server is running on port 5001.");
+    }
   };
 
   return (

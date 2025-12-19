@@ -11,7 +11,6 @@ import Notes from "./Pages/Notes";
 import Tasks from "./Pages/Tasks";
 import Profile from "./Pages/Profile";
 import Login from "./Pages/Login";
-import ProtectedRouter from "./Pages/Help";
 // just to create url and on which url which page should displayed
 const routerVariables = createBrowserRouter([
   {
@@ -20,11 +19,11 @@ const routerVariables = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <ProtectedRouter><Dashboard /></ProtectedRouter>,
+        element: <Dashboard />,
       },
       {
         path: "/home",
-        element: <ProtectedRouter><Home /></ProtectedRouter>,
+        element: <Home />,
       },
       {
         path: "/login",
@@ -32,19 +31,19 @@ const routerVariables = createBrowserRouter([
       },
       {
         path: "/notes",
-        element: <ProtectedRouter><Notes /></ProtectedRouter>,
+        element: <Notes />,
       },
       {
         path: "/tasks",
-        element: <ProtectedRouter><Tasks /></ProtectedRouter>,
+        element: <Tasks />,
       },
       {
         path: "/about",
-        element: <ProtectedRouter><About /></ProtectedRouter>,
+        element: <About />,
       },
       {
         path: "/profile",
-        element: <ProtectedRouter><Profile /></ProtectedRouter>,
+        element: <Profile />,
       },
       {
         path: "*",
